@@ -1,0 +1,6 @@
+BUSINESS_NAMES*
+*.csv
+*.log
+*.zip
+*temp
+*.swp
