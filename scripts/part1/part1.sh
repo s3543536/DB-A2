@@ -13,10 +13,6 @@ then
 	time ./run-queries.sh derby-script-secidx.sql
 
 
-	exec 3>&1 4>&2
-	var=$( { time myexec -args 1>&3 2>&4; } 2>&1 )  # Captures time only.
-	exec 3>&- 4>&-	
-
 	echo "test query\n1\twith-reboot"
 	exec 3>&1 4>&2
 	q1r=$( { time ./run-queries.sh query-tables1.sql 1>&3 2>&4; } 2>&1 )  # Captures time only.
