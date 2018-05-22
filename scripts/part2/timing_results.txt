@@ -1,0 +1,63 @@
+times for inserting data:
+
+no secondary index
+
+real	0m41.807s
+user	0m26.576s
+sys	0m0.452s
+
+secondary index
+
+real	3m55.679s
+user	0m30.096s
+sys	0m0.692s
+
+
+
+
+
+Directly after reboot:
+
+Query 1, no-secondary idx
+real	0m3.234s
+user	0m0.048s
+sys	0m0.008s
+
+Query 2, no-secondary idx
+real	0m0.081s
+user	0m0.060s
+sys	0m0.004s
+
+Query 1, secondary idx
+real	0m0.074s
+user	0m0.048s
+sys	0m0.008s
+
+Query 2, secondary idx
+real	0m0.128s
+user	0m0.060s
+sys	0m0.000s
+
+
+Not after reboot:
+
+Query 1, no-secondary idx
+real	0m3.234s
+user	0m0.048s
+sys	0m0.008s
+
+Query 2, no-secondary idx
+real	0m0.081s
+user	0m0.060s
+sys	0m0.004s
+
+Query 1, secondary idx
+real	0m0.074s
+user	0m0.048s
+sys	0m0.008s
+
+Query 2, secondary idx
+real	0m0.128s
+user	0m0.060s
+sys	0m0.000s
+
