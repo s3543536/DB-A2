@@ -1,0 +1,59 @@
+Inserting data no sec-idx
+
+real	1m40.181s
+user	1m34.756s
+sys	0m3.532s
+
+
+Inserting data sec-idx
+
+real	2m4.205s
+user	1m58.416s
+sys	0m3.904s
+
+
+
+Directly after reboot:
+
+Query 1, no-secondary idx
+real	0m3.316s
+user	0m2.548s
+sys	0m0.140s
+
+Query 2, no-secondary idx
+real	1m40.449s
+user	0m4.472s
+sys	0m0.636s
+
+Query 1, secondary idx
+real	0m1.254s
+user	0m1.176s
+sys	0m0.056s
+
+Query 2, secondary idx
+real	1m40.648s
+user	0m5.180s
+sys	0m1.200s
+
+
+Not after reboot:
+
+Query 1, no-secondary idx
+real	0m3.316s
+user	0m2.548s
+sys	0m0.140s
+
+Query 2, no-secondary idx
+real	1m40.449s
+user	0m4.472s
+sys	0m0.636s
+
+Query 1, secondary idx
+real	0m1.254s
+user	0m1.176s
+sys	0m0.056s
+
+Query 2, secondary idx
+real	1m40.648s
+user	0m5.180s
+sys	0m1.200s
