@@ -12,8 +12,6 @@ then
 	echo "creating tables and loading data into DB with secondary index"
 	time ./run-queries.sh derby-script-secidx.sql
 
-	echo "reboot DBs"
-	#TODO
 
 	exec 3>&1 4>&2
 	var=$( { time myexec -args 1>&3 2>&4; } 2>&1 )  # Captures time only.
@@ -64,14 +62,14 @@ then
 	printf "\n\n\nDirectly after reboot:"
 	printf "\n\nQuery 1, no-secondary idx$q1r"
 	printf "\n\nQuery 2, no-secondary idx$q2r"
-	printf "\n\nQuery 1, secondary idx$q1r"
-	printf "\n\nQuery 2, secondary idx$q2r"
+	printf "\n\nQuery 1, secondary idx$q1rs"
+	printf "\n\nQuery 2, secondary idx$q2rs"
 
 	printf "\n\n\nNot after reboot:"
 	printf "\n\nQuery 1, no-secondary idx$q1r"
 	printf "\n\nQuery 2, no-secondary idx$q2r"
-	printf "\n\nQuery 1, secondary idx$q1r"
-	printf "\n\nQuery 2, secondary idx$q2r\n\n"
+	printf "\n\nQuery 1, secondary idx$q1rs"
+	printf "\n\nQuery 2, secondary idx$q2rs\n\n"
 
 else
 	echo "Usage: bash part1.sh input_csv_file"
